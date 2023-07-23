@@ -58,7 +58,7 @@ export default function App() {
           event.preventDefault();
           mutation.mutate({
             title: formRef.current["title"].value,
-            content: formRef.current["content"].valuey,
+            content: formRef.current["content"].value,
           });
         }}
         ref={formRef}
@@ -95,7 +95,7 @@ export default function App() {
 
       {data?.length == 0 ? (
         <div>
-          <h3 className="mx-5">No Posts</h3>
+          <h3 className="mx-5">No posts, add a new post above!</h3>
         </div>
       ) : (
         data?.map((post) => {
