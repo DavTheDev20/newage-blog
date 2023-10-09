@@ -98,9 +98,11 @@ export default function App() {
           <h3 className="mx-5">No posts, add a new post above!</h3>
         </div>
       ) : (
-        data?.map((post) => {
-          return <PostCard key={post.id} post={post} />;
-        })
+        data
+          ?.map((post) => {
+            return <PostCard key={post.id} post={post} />;
+          })
+          .reverse()
       )}
     </div>
   );
